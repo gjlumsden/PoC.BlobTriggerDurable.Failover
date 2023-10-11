@@ -52,6 +52,10 @@ resource functionApp 'Microsoft.Web/sites@2018-11-01' = {
           name: 'WEBSITE_CONTENTSHARE'
           value: uniqueString(name)
         }
+        {
+          name: 'Region'
+          value: locationAbbreviations[location]
+        }
       ]
       use32BitWorkerProcess: true
       ftpsState: 'FtpsOnly'
