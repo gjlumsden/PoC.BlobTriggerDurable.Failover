@@ -11,6 +11,8 @@ namespace PoC.BlobTriggerDurable.Failover.Functions
 {
     public static class ActivityFunctions
     {
+        //This class contains simple actions that the orchstrator uses.
+
         [FunctionName(nameof(EchoLine))]
         public static string EchoLine([ActivityTrigger] string line, ILogger log)
         {

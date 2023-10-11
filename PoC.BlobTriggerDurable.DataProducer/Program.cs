@@ -28,7 +28,7 @@ namespace PoC.BlobTriggerDurable.DataProducer
                 var blobClient = new BlobClient(connectionString, "input", fileName);
                 await blobClient.UploadAsync(new MemoryStream(Encoding.UTF8.GetBytes(string.Join("\n", lines))));
                 Console.WriteLine($"Uploaded {fileName}");
-                await Task.Delay(3000);
+                await Task.Delay(10000);
             }
         }
     }
